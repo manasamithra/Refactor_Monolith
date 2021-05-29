@@ -1,0 +1,18 @@
+version: "3"
+services:
+  reverse-proxy:
+    build:
+      context: reverse-proxy
+    image: dockerwebtraining/reverse-proxy
+  udagram-backend-user:
+    build:
+      context: ../udagram-backend-user
+    image: dockerwebtraining/udagram-backend-user
+  udagram-backend-feed:
+    build:
+      context: ../udagram-backend-feed
+    image: dockerwebtraining/udagram-backend-feed
+  udagram-frontend:
+    build:
+      context: ../udagram-frontend
+    image: dockerwebtraining/udagram-frontend
